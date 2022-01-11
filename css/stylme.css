@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+  }
 #page-container {
     position: relative;
     min-height: 100vh;
@@ -87,6 +89,16 @@ img.header {
     float: left;
     padding-right: 10px;
 }
-.imageBox {
-    display: inline-block;
-    }
+
+.imgHolder {
+    display: inline-grid;
+    grid-template-columns:auto auto;
+    grid-gap: 1px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.imgHolder > img{
+    justify-self: start;
+}
