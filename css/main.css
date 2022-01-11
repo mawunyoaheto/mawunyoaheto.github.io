@@ -12,20 +12,24 @@ h2 {
     font-family: Lucida Sans Unicode, Helvetica, Arial;
     font-size: 18pt;
     text-align: left;
+    padding-left: 10px;
 }
 
 html,
 body {
     height: 100%;
+    font-size: medium;
+}
+
+#content{
+    height: auto;
 }
 
 body {
 
     max-width: 1180px;
     width: 98%;
-    position: relative;
     margin: 0px auto;
-    min-height: 100%;
     overflow-x: hidden;
     background-color: white;
     color: #404040;
@@ -56,10 +60,43 @@ body {
 #footer {
     position: absolute;
     display: block;
-    align-items: center;
     right: 0;
     bottom: 0;
     left: 0;
     background: #F0F0F0;
 
 }
+
+
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 599px) {
+    body {
+
+        width: 98%;
+        margin: 0px auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        background-color: white;
+        color: #404040;
+        font-size: 11pt;
+        font-family: Georgia, Garamond, sans-serif;
+    
+    }
+    .imageBox {
+        display: inline-block;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+
+    #footer {
+        position: relative;
+        display: block;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #F0F0F0;
+    
+    }
+  }
+  
