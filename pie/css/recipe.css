@@ -26,16 +26,17 @@ body {
     color: #404040;
     font-size: 11pt;
     font-family: Georgia, Garamond,sans-serif;
+    background-image: url('/pie/images/silverware.jpg');
 }
 
 a{
     color: #A4A400;
 }
 p.comments{
-    background-color: bisque;
+    background-color: #FFFFA8;
 }
 #footer {
-    float: right;
+    float: left;
     display: table-row;
     padding-bottom: 20px;
     padding: 13px 7px 0px 17px;
