@@ -42,6 +42,11 @@ p.comments{
     font-style: italic;
 }
 
+figure{
+    padding: 0;
+    margin: 0;
+}
+
 #copyright{
 
     text-align: right;
