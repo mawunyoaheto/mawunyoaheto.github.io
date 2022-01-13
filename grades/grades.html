@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/grades.css" rel="stylesheet">
+</head>
+
+<body>
+    <form method="post" action="http://mumstudents.org/params.php">
+        <fieldset>
+            <div class="grid-container">
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="student_name">
+                </div>
+                <div>
+                    <label for="student-id">Student ID</label>
+                    <input type="text" name="student_id" id="student-id">
+                </div>
+                <div>
+                    <label for="assignment">Assignment</label>
+                    <select id="assignment" name="assignment">
+                        <option value="homepage">My Homepage Lab</option>
+                        <option value="about">About Me Lab</option>
+                        <option value="grades">Grades Exercises</option>
+                        <option value="forms">spring 2022 Forms Lab</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+
+                    <fieldset>
+                        <legend>Entry</legend>
+                        <input type="radio" id="spring" name="entry_year" value="spring 2021">
+                        <label for="spring">spring 2021</label><br>
+                        <input type="radio" id="summer" name="entry_year" value="summer 2021">
+                        <label for="summer">summer 2021</label><br>
+                        <input type="radio" id="fall" name="entry_year" value="fall 2021">
+                        <label for="fall">fall 2021</label>
+
+                    </fieldset>
+
+                </div>
+
+                <div>
+                    <input type="checkbox" id="confirm" name="confirm" value="agree">
+                    <label for="confirm">I confirm that I am only looking up my own grade </label><br>
+                </div>
+                <div>
+                    <button type="reset">Reset</button>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
