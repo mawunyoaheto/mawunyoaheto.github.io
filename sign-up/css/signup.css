@@ -29,7 +29,7 @@ div.card {
     padding: 5px;
 }
 
-a {
+a,em{
 	color: #F44;
 	text-decoration: none;
 }
