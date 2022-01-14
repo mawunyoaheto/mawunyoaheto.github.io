@@ -25,6 +25,10 @@ body {
     height: auto;
 }
 
+ul li{
+    margin: 5px;
+}
+
 body {
 
     max-width: 1180px;
@@ -66,6 +70,8 @@ body {
     background: #F0F0F0;
 
 }
+
+
 
 
 
