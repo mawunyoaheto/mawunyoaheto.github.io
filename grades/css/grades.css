@@ -17,6 +17,18 @@ form div{
     margin: 10px;
 }
 
+div.card {
+    margin: 0 auto;
+    width: 550px;
+    padding: 5px;
+}
+
+.imageBox {
+    margin-top: 30px;
+    display: inline-block;
+   margin-left: 0;
+}
+
 fieldset{
     border: 0;
     padding: 0;
@@ -28,12 +40,8 @@ form div fieldset{
     border-radius: 12px;
 }
 
-form div fieldset input[type=radio]{
-float: left;
-}
 
 button {
-    /* background-color: #4CAF50; */
     margin: 3px;
     padding: 6px 10px;
     border-radius: 4px;
