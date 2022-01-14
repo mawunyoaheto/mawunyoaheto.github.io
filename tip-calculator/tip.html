@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function calcTip() {
+
+        // Enter your code here to make Tip Calculator work
+
+        let subtotal = document.getElementById('subtotal').value;
+        let tipPercent = document.getElementById('tip').value;
+        let total = document.getElementById('total');
+
+
+        if (subtotal == null || subtotal == '') {
+
+            alert('Please input a value for subtotal');
+            return;
+        }
+
+        if (tipPercent == null || tipPercent == '') {
+
+            alert('Please input a value for tip');
+            return;
+        }
+
+
+        let subtotalValue = parseFloat(subtotal);
+        let tipPercentValue = parseFloat(tipPercent);
+        let totalValue = (((tipPercentValue / 100) * subtotalValue) + subtotalValue);
+
+        total.innerHTML = totalValue.toFixed(2);
+
+    }
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link href="css/tip.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>
+        <img id="logo" src="images/calc.jpg" alt="++--**//" />
+        Tip Calculator
+    </h1>
+
+    <div>
+        <label><input id="subtotal" type="text" /> $ Subtotal</label>
+    </div>
+
+    <div>
+        <label><input id="tip" type="text" /> % Tip</label>
+    </div>
+
+    <div>
+        <button id="btn" onclick="calcTip();">Calculate Tip</button>
+    </div>
+
+    <hr />
+
+    <div>
+        <h2>Your total:</h2>
+        <p id="total">$0.00</p>
+    </div>
+
+</body>
+
+</html>
