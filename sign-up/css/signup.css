@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    font-size: 10pt;
+	font-family: "Verdana", "Geneva", sans-serif;
+    overflow: hidden;
+}
+
+body {
+	background-color: white;
+	padding-left: 1em;
+}
+form {
+    margin: 0 auto;
+    margin-bottom: 2em;
+    width: 550px;  
+}
+
+
+
+#header{
+    margin: 0 auto;
+    width: 550px;
+    margin-bottom: 5px;
+}
+
+div.card {
+    margin: 0 auto;
+    width: 550px;
+    padding: 5px;
+}
+
+a {
+	color: #F44;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #FFA;
+}
+
+.imageBox {
+    margin-top: 30px;
+    display: inline-block;
+   margin-left: 0;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 20px;
+    float: left;
+    padding: 1px;
+    margin-right: 2px;
+    margin-top: 0;
+}
+
+fieldset {
+    background-color: #E0E0FF;
+	border: 2px outset gray;
+	border-radius: 10px;
+}
+
+legend {
+    background-color:white;
+    padding: 5px 10px;
+    border:1;
+  }
+
+form div {
+    margin: 5px;
+}
+
+form label.start {
+    font-weight: bold;
+    display: inline-block;
+    width: 160px;
+}
+
+button[type="submit"] {
+    background-color: #FAA;
+	font-size: 120%;
+	font-weight: bold;
+  }
+
+
+  @media screen and (max-width:599px){
+    
+    /* remove the width from the form so that it is just as wide as the screen */
+
+    form{
+        width: auto;
+        margin-bottom: 1em;
+    }
+
+
+    /* turn labels into blocks so they can stretch accross the entire screen.
+    Also, get rid of the margin so that the text is left aligned. 
+    Finally, set the width to auto so that it isn't at 90px*/
+
+
+    label{
+        display: block;
+        margin: 0;
+        text-align: left;
+        width: auto;
+    }
+
+    /* Let the inputs, textareas and selects span the entire screen, too */
+
+    input[type=text],input[type=email],select,textarea{
+        width: 98%;
+    }
+
+    div.card{
+        margin: 0 auto;
+        width: auto;
+        padding: 1em;
+        border-radius: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+}
