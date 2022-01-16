@@ -70,12 +70,11 @@ function createPigLatin() {
         alert(word.match(/\d+/g));
         if (typeof word == Number)
             return -1;
-        for (let i = 0; i < word.length; i++) {
+
+        for (let i = 0; i < word.length; i++)
             if (vowels.includes(word[i]))
                 return i;
-        }
     }
-
     textArea.value = words.join(" ");
 }
 
