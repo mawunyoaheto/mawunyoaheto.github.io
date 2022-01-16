@@ -3,7 +3,6 @@ body {
     font-size: 12pt;
     margin-left: 20px;
     margin-right: 20px;
-	margin-bottom: 20px;
 }
 
 #header {
@@ -26,4 +25,7 @@ legend {
 textarea {
     font-family: monospace;
     font-size: 12pt;
+}
+div button{
+	margin: 5px;
 }
