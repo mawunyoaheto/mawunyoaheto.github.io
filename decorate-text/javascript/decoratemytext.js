@@ -57,10 +57,10 @@ function createPigLatin() {
 
     words.forEach(pigLatinFunction);
     function pigLatinFunction(value, index, array) {
-        var result = vowelLocation(value);
+        var vowelPosition = vowelLocation(value);
 
-        if (result > 0)
-            array[index] = value.substr(result) + value.slice(0, result) + "ay";
+        if (vowelPosition > 0)
+            array[index] = value.substr(vowelPosition) + value.slice(0, vowelPosition) + "ay";
         else
             array[index] = value + "ay";
     }
