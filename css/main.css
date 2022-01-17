@@ -1,6 +1,8 @@
 #page-container {
     position: relative;
-    height: 100%;
+    height: auto;
+    padding: 1em;
+    border-radius: 1em;
 }
 
 a {
@@ -8,25 +10,28 @@ a {
 }
 
 h2 {
-    background: #F0F0F0;
+    background: linear-gradient(140deg, #807b83, #695c75, #604e70, rgb(54, 33, 63));
+    color: #fff;
     font-family: Lucida Sans Unicode, Helvetica, Arial;
-    font-size: 18pt;
+    font-size: 2rem;
+    line-height: 2.5rem;
     text-align: left;
-    padding-left: 10px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    width: fit-content;
+    margin-top: 0;
 }
 
 html,
 body {
     height: 100%;
+    color: #545e6f;
     font-size: medium;
 }
 
-#content{
+#content {
     height: auto;
-}
-
-ul li{
-    margin: 5px;
+    border-radius: 1em;
 }
 
 body {
@@ -44,9 +49,6 @@ body {
 
 #header {
     padding: 10px;
-    font-family: Georgia;
-    font-size: 16px;
-    font-weight: bold;
     border-bottom-style: double;
     border-radius: 12px;
     background-image: url('../images/header3.jpg');
@@ -62,23 +64,59 @@ body {
 }
 
 #footer {
-    position: absolute;
     display: block;
     right: 0;
     bottom: 0;
     left: 0;
-    background: #F0F0F0;
-
 }
 
+.toc-title {
+    color: #545e6f;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: -0.2px
+}
 
+.uc-bg-grey {
+    background: #f1f2f5
+}
 
+.uc-bg-white {
+    background: #fff
+}
 
+.uc-title {
+    color: #545e6f;
+    font-weight: 500;
+    letter-spacing: -0.2px
+}
 
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-  @media (max-width: 599px) {
+#markdown-toc {
+    margin-top: 20px;
+    padding-left: 20px
+}
+
+#markdown-toc li:before {
+    content: '#';
+    color: rgba(206, 31, 153, 0.8);
+    margin-right: 10px
+}
+
+li a:hover {
+    color: #ce1f99
+}
+
+#markdown-toc li {
+    font-size: 1rem;
+    line-height: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 599px) {
     body {
-
         width: 98%;
         margin: 0px auto;
         min-height: 100%;
@@ -87,8 +125,8 @@ body {
         color: #404040;
         font-size: 11pt;
         font-family: Georgia, Garamond, sans-serif;
-    
     }
+
     .imageBox {
         display: inline-block;
         padding-top: 10px;
@@ -101,8 +139,5 @@ body {
         right: 0;
         bottom: 0;
         left: 0;
-        background: #F0F0F0;
-    
     }
-  }
-  
+}
