@@ -16,11 +16,14 @@ window.onload = function () {
             text.style.fontWeight = "bold";
             text.style.color = "green";
             text.style.textDecoration = "underline";
-            document.body.style.backgroundImage = "url('http://www.cs.washington.edu/education/courses/190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg')";
+            document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "no-repeat";
         } else {
             text.style.fontWeight = "";
             text.style.color = "";
             text.style.textDecoration = "none";
+            document.body.style.backgroundImage = "none";
         }
     });
 
@@ -36,14 +39,13 @@ function timerCall() {
         clearInterval(timer);
         timer = null;
     }
-}
 
-function biggerDecoration() {
-    let textArea = document.getElementById("myText");
-    let fontSize = parseInt(window.getComputedStyle(textArea).fontSize) - 4;
-    alert(fontSize);
-    fontSize += 2;
-    textArea.style.fontSize = fontSize + "pt";
+    function biggerDecoration() {
+        let textArea = document.getElementById("myText");
+        let fontSize = parseInt(window.getComputedStyle(textArea).fontSize) - 4;
+        fontSize += 2;
+        textArea.style.fontSize = fontSize + "pt";
+    }
 }
 
 
@@ -58,19 +60,18 @@ function createPigLatin() {
     words.forEach(pigLatinFunction);
     function pigLatinFunction(value, index, array) {
         var vowelPosition = vowelLocation(value);
-
-        if (vowelPosition > 0)
-            array[index] = value.substr(vowelPosition) + value.slice(0, vowelPosition) + "ay";
-        else
+        
+        if(vowelPosition==0)
             array[index] = value + "ay";
+        else if (vowelPosition > 0)
+            array[index] = value.substr(vowelPosition) + value.slice(0, vowelPosition) + "ay";
     }
 
     function vowelLocation(word) {
 
-        alert(word.match(/\d+/g));
-        if (typeof word == Number)
+        if (!isNaN(word.charAt(0))) //If is a number
             return -1;
-
+          
         for (let i = 0; i < word.length; i++)
             if (vowels.includes(word[i]))
                 return i;
