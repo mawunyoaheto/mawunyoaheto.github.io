@@ -1,12 +1,11 @@
-"use strict";
-
-let currentAnimation;
-let startButton;
-let stopButton;
-let animation;
-let animationSelect;
-let animationSize;
-let chkBoxSpeed;
+'use strict';
+var currentAnimation;
+var startButton;
+var stopButton;
+var animation;
+var animationSelect;
+var animationSize;
+var chkBoxSpeed;
 var animating = false;
 var delay = 250;
 
