@@ -61,3 +61,7 @@ legend{
   column-gap: 5px;
 }
 
+button{
+    width: auto;
+}
+
