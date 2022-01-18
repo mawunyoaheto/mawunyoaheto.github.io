@@ -69,7 +69,7 @@ function createPigLatin() {
 
     function vowelLocation(word) {
 
-        if (!isNaN(word.charAt(0))) //If is a number
+        if (word.length==1 && !isNaN(word.charAt(0))) //checks if its a single character and character is a number
             return -1;
           
         for (let i = 0; i < word.length; i++)
