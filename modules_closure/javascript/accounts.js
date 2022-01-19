@@ -40,7 +40,6 @@ let createAccount = (function () {
 
     let getAccountInfo = () => {
         let details = "";
-
         for (let obj of accountsInfoList)
             details += "Account type: " + Object.values(obj)[0] + " " + "Balance: " + Object.values(obj)[1] + "\n";
         return details;
