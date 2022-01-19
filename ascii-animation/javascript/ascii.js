@@ -1,5 +1,4 @@
 "use strict";
-
 var currentAnimation;
 var startButton;
 var stopButton;
