@@ -1,0 +1,25 @@
+#container {
+    padding: 0 20px 20px;
+    margin: 120px auto 120px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px #dedada;
+    width: 500px;
+}
+#container div{
+    margin: 5px;
+    display: flex
+}
+
+label {
+    font-weight: bold;
+    min-width: 130px;
+}
+
+input[type=text]{
+    width: 98%;
+}
+textarea {
+    margin: 0 auto;
+    width: 98%;
+    box-sizing: border-box;
+}
