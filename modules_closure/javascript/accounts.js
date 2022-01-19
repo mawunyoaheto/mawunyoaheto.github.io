@@ -6,8 +6,8 @@ window.onload = function () {
 function onAddAccountClicked() {
     let accountNameElement = document.getElementById("accout_name");
     let depositeElement = document.getElementById("deposit");
-    const accountName = accountNameElement.value.trim();
-    const deposit = depositeElement.value.trim();
+    let accountName = accountNameElement.value.trim();
+    let deposit = depositeElement.value.trim();
 
     if (accountName === "" || deposit === "") {
         alert("Please enter account name and deposit");
@@ -31,7 +31,7 @@ let createAccount = (function () {
     };
 
     let newAccount = (accType, depositAmount) => {
-        var acct = Object.create(account);
+        let acct = Object.create(account);
         acct.accType = accType;
         acct.depositAmount = depositAmount;
         accountsInfoList.push(acct);
