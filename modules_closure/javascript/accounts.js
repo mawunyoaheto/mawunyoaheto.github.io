@@ -13,6 +13,7 @@ function onAddAccountClicked() {
         alert("Please enter account name and deposit");
         return;
     }
+    
     createAccount.createAccount(accountName, deposit);
     let mytextarea = document.getElementById("txtOutput");
     mytextarea.value = "";
@@ -26,7 +27,7 @@ function onAddAccountClicked() {
 let createAccount = (function () {
     let accountsInfoList = [];
     let account = {
-        accountType: '',
+        accountType: "",
         amount: 0
     };
 
