@@ -10,26 +10,29 @@ window.onload = function () {
     decButton.onclick = timerCall;
 
     let chkBox = document.getElementById("ckbBling");
-    chkBox.addEventListener('change', function modifyFontStyle() {
-        let text = document.getElementById("myText");
-        if (chkBox.checked) {
-            text.style.fontWeight = "bold";
-            text.style.color = "green";
-            text.style.textDecoration = "underline";
-            document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "no-repeat";
-        } else {
-            text.style.fontWeight = "";
-            text.style.color = "";
-            text.style.textDecoration = "none";
-            document.body.style.backgroundImage = "none";
-        }
-    });
+    chkBox.onchange=modifyFontStyle;
 
     let btnMalKovitch = document.getElementById("malkovitch");
     btnMalKovitch.onclick = malKovitch;
 };
+
+
+function modifyFontStyle() {
+    let text = document.getElementById("myText");
+    if (document.getElementById("ckbBling").checked) {
+        text.style.fontWeight = "bold";
+        text.style.color = "green";
+        text.style.textDecoration = "underline";
+        document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+    } else {
+        text.style.fontWeight = "";
+        text.style.color = "";
+        text.style.textDecoration = "none";
+        document.body.style.backgroundImage = "none";
+    }
+}
 
 function timerCall() {
 
