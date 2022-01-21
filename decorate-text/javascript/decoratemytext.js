@@ -1,39 +1,45 @@
+/*jslint browser: true */
+/*global window */
+"use strict";
 
-var timer = null;
+let timer = null;
 
-window.onload = function () {
+window.onload = docElements;
 
-    var btnPigLatin = document.getElementById("pigLatin");
+function docElements() {
+    let btnPigLatin = document.getElementById("pigLatin");
     btnPigLatin.onclick = createPigLatin;
 
-    var decButton = document.getElementById("btnBigger");
+    let decButton = document.getElementById("btnBigger");
     decButton.onclick = timerCall;
 
-    var chkBox = document.getElementById("ckbBling");
-    chkBox.addEventListener('change', function modifyFontStyle() {
-        let text = document.getElementById("myText")
-        if (chkBox.checked) {
-            text.style.fontWeight = "bold";
-            text.style.color = "green";
-            text.style.textDecoration = "underline";
-            document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "no-repeat";
-        } else {
-            text.style.fontWeight = "";
-            text.style.color = "";
-            text.style.textDecoration = "none";
-            document.body.style.backgroundImage = "none";
-        }
-    });
+    let chkBox = document.getElementById("ckbBling");
+    chkBox.onchange=modifyFontStyle;
 
-    var btnMalKovitch = document.getElementById("malkovitch");
+    let btnMalKovitch = document.getElementById("malkovitch");
     btnMalKovitch.onclick = malKovitch;
 }
 
-function timerCall() {
 
-    if (timer == null)
+function modifyFontStyle() {
+    let text = document.getElementById("myText");
+    if (document.getElementById("ckbBling").checked) {
+        text.style.fontWeight = "bold";
+        text.style.color = "green";
+        text.style.textDecoration = "underline";
+        document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+    } else {
+        text.style.fontWeight = "";
+        text.style.color = "";
+        text.style.textDecoration = "none";
+        document.body.style.backgroundImage = "none";
+    }
+}
+
+function timerCall() {
+    if (timer === null)
         timer = setInterval(biggerDecoration, 500);
     else {
         clearInterval(timer);
@@ -50,16 +56,16 @@ function timerCall() {
 
 
 function createPigLatin() {
-    var textArea = document.getElementById("myText");
+    let textArea = document.getElementById("myText");
     if (textArea.value == "")
         return;
 
-    var vowels = ['a', 'e', 'i', 'o', 'u'];
-    var words = textArea.value.split(" ");
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let words = textArea.value.split(" ");
 
     words.forEach(pigLatinFunction);
     function pigLatinFunction(value, index, array) {
-        var vowelPosition = vowelLocation(value);
+        let vowelPosition = vowelLocation(value);
         
         if(vowelPosition==0)
             array[index] = value + "ay";
@@ -68,10 +74,8 @@ function createPigLatin() {
     }
 
     function vowelLocation(word) {
-
         if (word.length==1 && !isNaN(word.charAt(0))) //checks if its a single character and character is a number
-            return -1;
-          
+            return -1; 
         for (let i = 0; i < word.length; i++)
             if (vowels.includes(word[i]))
                 return i;
@@ -80,11 +84,11 @@ function createPigLatin() {
 }
 
 function malKovitch() {
-    var textArea = document.getElementById("myText");
+    let textArea = document.getElementById("myText");
     if (textArea.value == "")
         return;
 
-    var words = textArea.value.split(" ");
+    let words = textArea.value.split(" ");
 
     for (let i = 0; i < words.length; i++)
         if (words[i].length >= 5)
