@@ -1,8 +1,12 @@
+/*jslint browser: true */
+/*global window */
+"use strict";
 
 let timer = null;
 
-window.onload = function () {
+window.onload = docElements;
 
+function docElements() {
     let btnPigLatin = document.getElementById("pigLatin");
     btnPigLatin.onclick = createPigLatin;
 
@@ -14,7 +18,7 @@ window.onload = function () {
 
     let btnMalKovitch = document.getElementById("malkovitch");
     btnMalKovitch.onclick = malKovitch;
-};
+}
 
 
 function modifyFontStyle() {
