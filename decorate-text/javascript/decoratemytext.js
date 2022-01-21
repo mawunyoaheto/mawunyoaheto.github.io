@@ -1,17 +1,17 @@
 
-var timer = null;
+let timer = null;
 
 window.onload = function () {
 
-    var btnPigLatin = document.getElementById("pigLatin");
+    let btnPigLatin = document.getElementById("pigLatin");
     btnPigLatin.onclick = createPigLatin;
 
-    var decButton = document.getElementById("btnBigger");
+    let decButton = document.getElementById("btnBigger");
     decButton.onclick = timerCall;
 
-    var chkBox = document.getElementById("ckbBling");
+    let chkBox = document.getElementById("ckbBling");
     chkBox.addEventListener('change', function modifyFontStyle() {
-        let text = document.getElementById("myText")
+        let text = document.getElementById("myText");
         if (chkBox.checked) {
             text.style.fontWeight = "bold";
             text.style.color = "green";
@@ -27,13 +27,13 @@ window.onload = function () {
         }
     });
 
-    var btnMalKovitch = document.getElementById("malkovitch");
+    let btnMalKovitch = document.getElementById("malkovitch");
     btnMalKovitch.onclick = malKovitch;
-}
+};
 
 function timerCall() {
 
-    if (timer == null)
+    if (timer === null)
         timer = setInterval(biggerDecoration, 500);
     else {
         clearInterval(timer);
@@ -50,16 +50,16 @@ function timerCall() {
 
 
 function createPigLatin() {
-    var textArea = document.getElementById("myText");
+    let textArea = document.getElementById("myText");
     if (textArea.value == "")
         return;
 
-    var vowels = ['a', 'e', 'i', 'o', 'u'];
-    var words = textArea.value.split(" ");
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let words = textArea.value.split(" ");
 
     words.forEach(pigLatinFunction);
     function pigLatinFunction(value, index, array) {
-        var vowelPosition = vowelLocation(value);
+        let vowelPosition = vowelLocation(value);
         
         if(vowelPosition==0)
             array[index] = value + "ay";
@@ -80,11 +80,11 @@ function createPigLatin() {
 }
 
 function malKovitch() {
-    var textArea = document.getElementById("myText");
+    let textArea = document.getElementById("myText");
     if (textArea.value == "")
         return;
 
-    var words = textArea.value.split(" ");
+    let words = textArea.value.split(" ");
 
     for (let i = 0; i < words.length; i++)
         if (words[i].length >= 5)
