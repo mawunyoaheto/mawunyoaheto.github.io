@@ -16,7 +16,7 @@ $(document).ready(function (){
 
 
     function DeleteItem() {
-        $(this).parent().hide();
+        $(this).parent().detach();
     }
 });
 

@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jade": "^0.29.0",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  },
+  "name": "number-quiz",
+  "version": "1.0.0",
+  "description": "web application that presents a series of quiz questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raymond Aheto",
+  "license": "ISC"
+}
